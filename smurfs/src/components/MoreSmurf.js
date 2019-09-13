@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { smurfDispatch } from '../actions/ActionIndex.js';
 
 
+
+
 const MoreSmurf = props => {
     const { smurfDispatch, smurfs, fetchingSmurfs, error } = props;
   
@@ -13,7 +15,7 @@ const MoreSmurf = props => {
   
     
     return (
-      <div>
+      <div className="wrap">
         {smurfs.map(item => 
           <Smurf
             key={item.id}

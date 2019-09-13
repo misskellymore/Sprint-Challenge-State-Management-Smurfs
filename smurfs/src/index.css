@@ -2,4 +2,63 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  color: whitesmoke;
+}
+
+html { 
+  background: url(https://images.unsplash.com/photo-1559951407-5195d454e11b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  padding: 10rem;
+  
+}
+
+form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 30rem;
+  padding: 1rem;
+  
+}
+
+input{
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+button{
+  width: 15rem;
+  margin: 0 auto;
+  padding: .5rem;
+}
+
+.smurfs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  justify-items: center;
+  padding: 5rem;
+  align-items: center;
+  align-content: center;
+  background-color: brown;
+  margin-bottom: 1rem;
+  width:8rem;
+  opacity: .8;
 }
