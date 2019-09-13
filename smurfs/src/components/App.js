@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import {Route} from 'react-router-dom';
 import SmurfContext from '../contexts/SmurfContext.js';
 import Smurf from './Smurf.js';
 import Form from '../components/Form.js';

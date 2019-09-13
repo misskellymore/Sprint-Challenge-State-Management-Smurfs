@@ -3,10 +3,11 @@ import axios from 'axios';
 
 
 
+
 export default class Form extends Component {
     constructor() {
         super();
-        this.state={name:"", age: null, height: ""}
+        this.state={name:"", age: "", height: ""}
     }
 
     handleChange = (e) =>{
