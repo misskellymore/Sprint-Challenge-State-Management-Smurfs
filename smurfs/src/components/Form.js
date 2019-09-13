@@ -1,10 +1,46 @@
-import React, {useState} from 'react';
+import React, { Component} from 'react';
+import axios from 'axios';
 
 
-const Form = () => {
-    const [newSmurf, setNewSmurf] = useState();
+
+export default class Form extends Component {
+    constructor() {
+        super();
+        this.state={name:"", age: null, height: ""}
+    }
+
+    handleChange = (e) =>{
+
+        e.preventDefault();
+        this.setState({
+            [e.target.name]: e.target.value
+        })
 
 
+    }
+
+
+    onSubmit = (e) => {
+        e.preventDefault();
+        const newSmurf = {
+            name:this.state.name,
+            age: this.state.age,
+            height: this.state.height
+        }
+
+        axios.post('http://localhost:3333/smurfs', newSmurf)
+         .then(res => 
+            console.log(res.data))   
+
+            .catch(error => {
+                console.log('post error', error)
+            })
+    }
+    
+
+
+
+    render() {
     return (
         <div>
             <h1> Smurf Form</h1>
@@ -14,26 +50,27 @@ const Form = () => {
                         name= "name"
                         placeholder= "Name"
                         className= "name"
-                        value = {newSmurf.name} />
+                        value = {this.state.name} />
                 <input
                          type= "number"
                          name= "age"
                          placeholder= "Age"
                          className= "age"
-                         value = {newSmurf.age} />
+                         value = {this.state.age} />
                 <input
                          type= "text"
                          name= "height"
                          placeholder= "Height"
                          className= "height"
-                         value = {newSmurf.height} />
+                         value = {this.state.height} />
             </form>
             <button type="submit">Enter</button>
         </div>
     )
 }
+}
 
 
 
 
-export default Form;
+
