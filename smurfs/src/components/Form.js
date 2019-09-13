@@ -44,27 +44,32 @@ export default class Form extends Component {
     return (
         <div>
             <h1> Smurf Form</h1>
-            <form>
+            <form onSubmit= {this.onSubmit}>
                 <input
                         type= "text"
                         name= "name"
                         placeholder= "Name"
                         className= "name"
-                        value = {this.state.name} />
+                        value = {this.state.name}
+                        onChange ={this.handleChange} />
                 <input
                          type= "number"
                          name= "age"
                          placeholder= "Age"
                          className= "age"
-                         value = {this.state.age} />
+                         value = {this.state.age}
+                         onChange ={this.handleChange} />
                 <input
                          type= "text"
                          name= "height"
                          placeholder= "Height"
                          className= "height"
-                         value = {this.state.height} />
+                         value = {this.state.height}
+                         onChange ={this.handleChange} />
+
+                <button type="submit">Enter</button>
             </form>
-            <button type="submit">Enter</button>
+            
         </div>
     )
 }
