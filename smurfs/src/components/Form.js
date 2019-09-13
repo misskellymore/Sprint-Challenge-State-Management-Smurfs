@@ -16,7 +16,7 @@ const Form = () => {
                         className= "name"
                         value = {newSmurf.name} />
                 <input
-                         type= "text"
+                         type= "number"
                          name= "age"
                          placeholder= "Age"
                          className= "age"
@@ -32,3 +32,8 @@ const Form = () => {
         </div>
     )
 }
+
+
+
+
+export default Form;
